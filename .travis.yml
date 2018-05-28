@@ -1,0 +1,19 @@
+language: node_js
+sudo: false
+node_js:
+- '7.0'
+install:
+- npm install
+script:
+- npm run cover && codecov
+before_deploy:
+- npm run build
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: ken726@hotmail.com
+  api_key: "$NPM_TOKEN"
+  on:
+    tags: true
+    repo: vip30/vue-plugin-helper-decorator
+    node: '7.0'
