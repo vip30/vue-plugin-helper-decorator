@@ -1,6 +1,6 @@
 import { createDecorator, VueDecorator } from 'vue-class-component'
 
-export function SocketIo(): VueDecorator {
+export function SocketIO(): VueDecorator {
   return createDecorator((componentOptions, handler) => {
     const options = componentOptions as any
     if (typeof options.sockets !== 'object') {

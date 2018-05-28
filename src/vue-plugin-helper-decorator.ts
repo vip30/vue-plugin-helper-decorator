@@ -1,1 +1,1 @@
-export { SocketIo } from './vue-socket.io'
+export { SocketIO } from './vue-socket.io'
