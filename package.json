@@ -25,8 +25,7 @@
     "test": "jest --no-cache --watchAll"
   },
   "files": [
-    "dist",
-    "index.d.ts"
+    "dist"
   ],
   "devDependencies": {
     "@types/jest": "^16.0.8",
@@ -52,7 +51,6 @@
   "pre-commit": [
     "pre-commit"
   ],
-  "typings": "index.d.ts",
   "dependencies": {
     "vue-class-component": "^6.2.0"
   },
