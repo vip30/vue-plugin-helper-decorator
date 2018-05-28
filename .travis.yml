@@ -4,8 +4,6 @@ node_js:
 - '7.0'
 install:
 - npm install
-script:
-- npm run cover && codecov
 before_deploy:
 - npm run build
 deploy:
