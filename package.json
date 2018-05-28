@@ -22,7 +22,7 @@
     "format": "prettier -signle-quote --write '**/*.ts' ",
     "pre-commit": "npm run format",
     "release": "sh release.sh",
-    "test": "jest --no-cache --watchAll"
+    "test": " "
   },
   "files": [
     "dist"
