@@ -1,5 +1,1 @@
-import { SocketIo } from './vue-socket.io'
-
-export default {
-  SocketIo
-}
+export { SocketIo } from './vue-socket.io'
