@@ -1,10 +1,10 @@
 {
   "name": "vue-plugin-helper-decorator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A bundle of decorator for using vue plugin",
   "main": "dist/vue-plugin-helper-decorator.umd.js",
   "module": "dist/vue-plugin-helper-decorator.js",
-  "typings": "dist/types/vue-plugin-helper-decorator.d.ts",  
+  "typings": "dist/types/vue-plugin-helper-decorator.d.ts",
   "keywords": [
     "vue",
     "typescript",
