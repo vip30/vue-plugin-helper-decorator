@@ -37,7 +37,7 @@ export class DummyComponent extends Vue {
   }
 
   @Validation()
-  public ValidationObject() {
+  public validationObject() {
     return {
       name: {
         required
