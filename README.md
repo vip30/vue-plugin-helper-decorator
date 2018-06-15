@@ -10,8 +10,9 @@ This library fully depends on [vue-class-component](https://github.com/vuejs/vue
 It helps for using vue plugins.
 
 Now support:
-- [Vue-socket.io](https://github.com/MetinSeylan/Vue-Socket.io)
-- [Vuelidate](https://github.com/monterail/vuelidate)
+
+* [Vue-socket.io](https://github.com/MetinSeylan/Vue-Socket.io)
+* [Vuelidate](https://github.com/monterail/vuelidate)
 
 ## License
 
@@ -31,8 +32,10 @@ import { required } from 'vuelidate/lib/validators'
 import { SocketIO, Validation } from 'vue-plugin-helper-decorator'
 @Component({})
 export class DummyComponent extends Vue {
-  @SocketIO()
-  public reconnect() {
+  @SocketIO({
+    name: 'reconnect' // can declare your custom event name
+  })
+  public myReconnect() {
     console.log('reconnect')
   }
 
