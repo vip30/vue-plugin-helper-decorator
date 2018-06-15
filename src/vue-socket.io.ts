@@ -3,8 +3,9 @@ import { createDecorator, VueDecorator } from 'vue-class-component'
 export interface SocketIoOption {
   /**
    * for declaring the socket event name manually
+   * Can support multiple event name point to same function
    */
-  name: string
+  name: string | string[]
 }
 
 /**
@@ -19,7 +20,13 @@ export function SocketIO(socketOption?: SocketIoOption): VueDecorator {
       options.sockets = Object.create(null)
     }
     if (socketOption && socketOption.name) {
-      options.sockets[socketOption.name] = options.methods[handler]
+      if (Array.isArray(socketOption.name)) {
+        socketOption.name.forEach(name => {
+          options.sockets[name] = options.methods[handler]
+        })
+      } else {
+        options.sockets[socketOption.name] = options.methods[handler]
+      }
     } else {
       options.sockets[handler] = options.methods[handler]
     }

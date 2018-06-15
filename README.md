@@ -33,7 +33,7 @@ import { SocketIO, Validation } from 'vue-plugin-helper-decorator'
 @Component({})
 export class DummyComponent extends Vue {
   @SocketIO({
-    name: 'reconnect' // can declare your custom event name
+    name: 'reconnect' // can declare your custom event name / names
   })
   public myReconnect() {
     console.log('reconnect')
