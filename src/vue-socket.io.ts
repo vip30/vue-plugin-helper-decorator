@@ -12,13 +12,13 @@ export interface SocketIoOption {
  * Adding the method in the component sockets options
  * https://github.com/MetinSeylan/Vue-Socket.io
  */
-export function SocketIO(socketOption: SocketIoOption): VueDecorator {
+export function SocketIO(socketOption?: SocketIoOption): VueDecorator {
   return createDecorator((componentOptions, handler) => {
     const options = componentOptions as any
     if (typeof options.sockets !== 'object') {
       options.sockets = Object.create(null)
     }
-    if (socketOption.name) {
+    if (socketOption && socketOption.name) {
       options.sockets[socketOption.name] = options.methods[handler]
     } else {
       options.sockets[handler] = options.methods[handler]
