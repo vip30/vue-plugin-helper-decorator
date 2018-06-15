@@ -3,7 +3,7 @@ import { createDecorator, VueDecorator } from 'vue-class-component'
 export interface SocketIoOption {
   /**
    * for declaring the socket event name manually
-   * Can support multiple event name point to same function
+   * can support multiple event name point to same function
    */
   name: string | string[]
 }
