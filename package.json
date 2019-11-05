@@ -1,6 +1,6 @@
 {
   "name": "vue-plugin-helper-decorator",
-  "version": "0.0.12",
+  "version": "0.0.11",
   "description": "A bundle of decorator for using vue plugin",
   "main": "dist/vue-plugin-helper-decorator.umd.js",
   "module": "dist/vue-plugin-helper-decorator.js",
@@ -11,7 +11,8 @@
     "decorator",
     "plugin",
     "vue-socket.io",
-    "vuelidates"
+    "vuelidates",
+    "idle-vue"
   ],
   "author": "vip30",
   "license": "MIT",
