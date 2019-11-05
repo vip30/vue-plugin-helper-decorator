@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc -p src/tsconfig.json && rollup -c",
     "cover": " ",
-    "format": "prettier -signle-quote --write '**/*.ts' ",
+    "format": "prettier --write src/**/*.ts ",
     "pre-commit": "npm run format",
     "release": "sh release.sh",
     "test": " "

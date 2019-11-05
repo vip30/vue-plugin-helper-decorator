@@ -6,7 +6,7 @@ import { createDecorator, VueDecorator } from 'vue-class-component'
  * https://github.com/soixantecircuits/idle-vue
  */
 export function OnIdle(): VueDecorator {
-  return createDecorator((componentOptions, handler) => {
+  return createDecorator(function(componentOptions, handler) {
     const options = componentOptions as any
     options.onIdle = options.methods[handler]
   })
@@ -18,7 +18,7 @@ export function OnIdle(): VueDecorator {
  * https://github.com/soixantecircuits/idle-vue
  */
 export function OnActive(): VueDecorator {
-  return createDecorator((componentOptions, handler) => {
+  return createDecorator(function(componentOptions, handler) {
     const options = componentOptions as any
     options.onActive = options.methods[handler]
   })

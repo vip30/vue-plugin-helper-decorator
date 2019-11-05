@@ -6,7 +6,7 @@ import { createDecorator, VueDecorator } from 'vue-class-component'
  * https://github.com/monterail/vuelidate
  */
 export function Validation(): VueDecorator {
-  return createDecorator((componentOptions, handler) => {
+  return createDecorator(function(componentOptions, handler) {
     const options = componentOptions as any
     options.validations = options.methods[handler]
   })

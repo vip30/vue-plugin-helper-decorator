@@ -14,7 +14,7 @@ export interface SocketIoOption {
  * https://github.com/MetinSeylan/Vue-Socket.io
  */
 export function SocketIO(socketOption?: SocketIoOption): VueDecorator {
-  return createDecorator((componentOptions, handler) => {
+  return createDecorator(function(componentOptions, handler) {
     const options = componentOptions as any
     if (typeof options.sockets !== 'object') {
       options.sockets = Object.create(null)
