@@ -10,7 +10,8 @@
     "typescript",
     "decorator",
     "plugin",
-    "vue-socket.io"
+    "vue-socket.io",
+    "vuelidates"
   ],
   "author": "vip30",
   "license": "MIT",
